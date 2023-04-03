@@ -1,0 +1,7 @@
+#Virtual Environment
+venv/
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
