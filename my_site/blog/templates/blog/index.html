@@ -1,0 +1,36 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block title %} 
+    My Blog 
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <section id="welcome">        
+        <header>
+            <img src="{% static "blog/images/lukasz-rawa-F4SGTNEMXb8-unsplash.jpg" %}" alt="Corneliu - The Author of this Blog" />
+            <h2>MyBlog App</h2>
+        </header>
+        <p>Hello, this is a blog made to learn Django!</p>
+    </section>
+    
+    <section id="latest-posts">
+        <h2>My Latest Posts</h2>
+        <ul>
+           {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+    
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>I love programming and teach other and explore new technologies in general.</p>
+        <p>My goal is to learn Django framework for now!</p>
+    </section>
+
+{% endblock %}
